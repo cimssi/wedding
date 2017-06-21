@@ -17,6 +17,8 @@
 		<!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
 		<!-- naver map -->
 		<script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1vle9zYHQ2LLq0wju0Pi"></script>
+		<!-- kakao link-->
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	</head>
 	<body>
 		<script>
@@ -51,10 +53,18 @@
 								<!-- <li><a href="#intro">Intro</a></li> -->
 								<li><a href="#gallery">Gallery</a></li>
 								<li><a href="#location">Location</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<!-- <li><a href="#contact">Contact</a></li> -->
 								<!-- <li><a href="#elements">Elements</a></li> -->
 							</ul>
 						</nav>
+						<div>
+							<ul class="icons">
+								<li><a href="TEL:010-5366-2182" class="icon fa-phone"><span class="label">신랑</span></a></li>
+								<li><a href="https://twitter.com/intent/tweet?text=TEXT&url=https://cimssi.github.io/wedding" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+								<li><a href="http://www.facebook.com/sharer/sharer.php?u=https://cimssi.github.io/wedding" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+								<li><a id="kakao-link-btn" href="javascript:;"><span class="label"><font size="1.8rem">KaKao</font></span></a></li>
+							</ul>
+						</div>
 					</header>
 
 				<!-- Main -->
@@ -121,6 +131,7 @@
 									<li><a href="TEL:010-5366-2182" class="icon fa-phone"><span class="label">신랑</span></a></li>
 									<li><a href="https://twitter.com/intent/tweet?text=TEXT&url=https://cimssi.github.io/wedding" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 									<li><a href="http://www.facebook.com/sharer/sharer.php?u=https://cimssi.github.io/wedding" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+									<li><a id="kakao-link-btn" href="javascript:;"><span class="label"><font size="1.8rem">KaKao</font></span></a></li>
 								</ul>
 							</article>
 					</div>
@@ -172,6 +183,34 @@
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 			</script> -->
-
+			<script type='text/javascript'>
+			  //<![CDATA[
+			    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+			    Kakao.init('1fac639aa096bf25bbef2101843f24f2');
+			    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+			    Kakao.Link.createDefaultButton({
+			      container: '#kakao-link-btn',
+			      objectType: 'feed',
+			      content: {
+			        title: '효리 ♥ 상순 결혼 합니다.',
+			        description: '격려와 축복으로 자리를 빛내 주시기 바랍니다',
+			        imageUrl: 'https://cimssi.github.io/wedding/images/1.jpg',
+			        link: {
+			          mobileWebUrl: 'https://developers.kakao.com',
+			          webUrl: 'https://developers.kakao.com'
+			        }
+			      },
+			      buttons: [
+			        {
+			          title: '모바일 청첩장',
+			          link: {
+			            mobileWebUrl: 'https://developers.kakao.com',
+			            webUrl: 'https://developers.kakao.com'
+			          }
+			        }
+			      ]
+			    });
+			  //]]>
+			</script>
 	</body>
 </html>
