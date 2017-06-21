@@ -4,35 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script>
-// 결혼식 까지 D-day
-var cDate = new Date();
-var wDate = new Date('june, 25, 2017');
-var ddd = new Date(wDate)
-var dDay = Math.floor((ddd.getTime() - cDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
-</script>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0vcp1etYhju5aAXV54qHDqxV0ukdgVJk" type="text/javascript"></script> -->
-
-<script>
-function initialize() {
-  var myLatlng = new google.maps.LatLng(35.860297, 128.566865);
-  var markerTitle = "웨딩홀";
-  var mapProp = {
-    center:myLatlng,
-    zoom:17,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  var marker = new google.maps.Marker({
-	  									position: myLatlng,
-	  									map: map,
-	  									title: markerTitle
-	  								  });
-  marker.setMap(map);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 <html>
 	<head>
 		<title>효리 ♥ 상순 : 청첩장</title>
@@ -41,9 +12,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- google map -->
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0vcp1etYhju5aAXV54qHDqxV0ukdgVJk" type="text/javascript"></script> -->
+		<!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
+		<!-- naver map -->
+		<script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1vle9zYHQ2LLq0wju0Pi"></script>
 	</head>
-	<body onload="initialize()">
-
+	<body>
+		<script>
+			// 결혼식 까지 D-day
+			var cDate = new Date();
+			var wDate = new Date('june, 25, 2017');
+			var ddd = new Date(wDate)
+			var dDay = Math.floor((ddd.getTime() - cDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+		</script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -59,8 +41,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 								      저희 두 사람이 사랑의 이름으로 행복할 수 있게 격려와 축복으로 자리를 빛내 주시기 바랍니다.<br />
 								</p>
 								<p>이효리 & 이상순</p>
-								<p style="margin:0 0 0 0; font-size:0.7rem">6월 25일 토요일 오후 2시</p>
-								<p style="margin:0 2 0 0; font-size:0.7rem">더리치 컨벤션 3층 프리미엄홀</p>
+								<p style="margin:0 0 0 0; font-size:0.8rem">6월 25일 토요일 오후 2시</p>
+								<p style="margin:0 2 0 0; font-size:0.8rem">웨딩비엔나 3층 프리미엄홀</p>
 								<span style="font-size:0.7rem">결혼식까지 <font color="yellow"><script>document.write(dDay);</script></font>일 남았습니다.</span>
 							</div>
 						</div>
@@ -89,21 +71,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
 						<!-- Work -->
 							<article id="gallery">
 								<h2 class="major">gallery</h2>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
 								<span class="image main"><img src="images/1.jpg" alt="" /></span>
 								<span class="image main"><img src="images/2.jpg" alt="" /></span>
 								<!-- <span class="image main"><img src="images/4.jpg" alt="" /></span>
 								<span class="image main"><img src="images/5.jpg" alt="" /></span> -->
 								<!-- <span class="image main"><a href="https://youtu.be/dr9j_3UrA2Y" target="_blank">youtu - https://www.youtube.com/embed/dr9j_3UrA2Y</a></span> -->
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 							</article>
 
 						<!-- Location -->
 							<article id="location">
 								<h2 class="major">Location</h2>
 								<!-- <span class="image main"><img src="images/pic03.jpg" alt="" /></span> -->
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.3727375430788!2d128.56557168169743!3d35.86060235673228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e478dbb0104d%3A0x7ced5e3caf199837!2z7Juo65Sp67mE7JeU64KY!5e0!3m2!1sko!2skr!4v1497967416153" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.3727375430788!2d128.56557168169743!3d35.86060235673228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e478dbb0104d%3A0x7ced5e3caf199837!2z7Juo65Sp67mE7JeU64KY!5e0!3m2!1sko!2skr!4v1497967416153" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 								<!-- <div id="googleMap" style="width:100%;height:300px;"></div> -->
+								<div id="map" style="width:100%; height:300px;"></div>
 								<ul>
 									<li><p style="margin: 0 0 0 0; font-size: 0.8rem;"><b>subway : 내당역 3번출구</b></p></li>
 									<li><p style="margin: 0 0 0 0; font-size: 0.8rem;"><b>bus : 509, 527</b></p></li>
@@ -132,12 +114,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="TEL:010-5366-2182" class="icon fa-phone"><span class="label">신부</span></a></li>
 									<li><a href="TEL:010-5366-2182" class="icon fa-phone"><span class="label">신랑</span></a></li>
 									<li><a href="https://twitter.com/intent/tweet?text=TEXT&url=http://cimssi.github.io/wedding" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 									<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://cimssi.github.io/wedding" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-									<!-- <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> -->
-									<!-- <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
 								</ul>
 							</article>
 
@@ -161,14 +140,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 									<h4>Preformatted</h4>
 									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+									while (!deck.isInOrder()) {
+									    print 'Iteration ' + i;
+									    deck.shuffle();
+									    i++;
+									}
+									
+									print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</section>
 
 								<section>
@@ -400,6 +378,38 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- naver map -->
+			<script>
+				var map = new naver.maps.Map('map', {
+				    center: new naver.maps.LatLng(35.860297, 128.566865),
+				    zoom: 11
+				});
+
+				var marker = new naver.maps.Marker({
+				    position: new naver.maps.LatLng(35.860297, 128.566865),
+				    map: map
+				});
+			</script>
+			<!-- google map -->
+			<!-- <script>
+			function initialize() {
+			  var myLatlng = new google.maps.LatLng(35.860297, 128.566865);
+			  var markerTitle = "웨딩홀";
+			  var mapProp = {
+			    center:myLatlng,
+			    zoom:17,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP
+			  };
+			  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			  var marker = new google.maps.Marker({
+				  									position: myLatlng,
+				  									map: map,
+				  									title: markerTitle
+				  								  });
+			  marker.setMap(map);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			</script> -->
 
 	</body>
 </html>
