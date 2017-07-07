@@ -22,8 +22,19 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	
-	<!-- naver map -->
-	<script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1vle9zYHQ2LLq0wju0Pi"></script>
+	<!-- kakao link--><script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<!-- naver map --><script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=1vle9zYHQ2LLq0wju0Pi"></script>
+	
+	<!-- googleAnalytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})
+		(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-101655184-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 	
 	<style type="text/css">
 		h2 {
@@ -38,19 +49,7 @@
 	
 </head>
 <body>
-
-       <!-- Preloader -->
-       <div class="animationload">
-           <div class="loader">
-               Loading...
-           </div>
-       </div> 
-       <!-- End Preloader -->
-
-       <!-- =========================
-                HOME
-       ========================== -->
-
+	<div class="animationload"><div class="loader">Loading...</div></div> 
 	<section id="home">
 		<div class="content">
                <div id="large-header" class="large-header">
@@ -192,7 +191,7 @@
 					<p style="color: #eee; margin:0 0 30px 0;">예식장 찾는 길 또는 주차 문의는<br>전화기 아이콘을 이용해 주세요.</p>
 					<!-- 네이버 지도 -->
 		        	<div style="overflow-y:hidden;">
-						<iframe width="100%" height="300px" src="http://192.168.0.8/wedding/sample/rainbow/map.html" scrolling="no" border="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+						<iframe width="100%" height="300px" src="http://card.woomo.co.kr/sample/rainbow/map.html" scrolling="no" border="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 					</div>
 					<!-- 네이버 지도 -->
 		            <div class="col-lg-4 col-md-4">
@@ -288,5 +287,35 @@
        <script src="js/plugin.js"></script>
        <script src="js/animated.js"></script>
        <script src="js/main.js"></script>
+       
+	<!-- kakao -->
+	<script type='text/javascript'>
+		//<![CDATA[
+		// // 사용할 앱의 JavaScript 키를 설정해 주세요.
+		Kakao.init('1fac639aa096bf25bbef2101843f24f2');
+		// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+		Kakao.Link
+				.createDefaultButton({
+					container : '#kakao-link-btn',
+					objectType : 'feed',
+					content : {
+						title : '서준 ♥ 유리 결혼 합니다.',
+						description : '격려와 축복으로 자리를 빛내 주시기 바랍니다',
+						imageUrl : 'http://card.woomo.co.kr/sample/rainbow/img/1.jpg',
+						link : {
+							mobileWebUrl : 'http://card.woomo.co.kr/sample/rainbow',
+							webUrl : 'http://card.woomo.co.kr/sample/rainbow'
+						}
+					},
+					buttons : [ {
+						title : '모바일 청첩장',
+						link : {
+							mobileWebUrl : 'http://card.woomo.co.kr/sample/rainbow',
+							webUrl : 'http://card.woomo.co.kr/sample/rainbow'
+						}
+					} ]
+				});
+		//]]>
+	</script>
 </body>
 </html>
